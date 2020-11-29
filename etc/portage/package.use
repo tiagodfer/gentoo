@@ -1,0 +1,97 @@
+## MY CONFIGS
+
+# dwm
+x11-wm/dwm savedconfig
+
+# virtualization
+app-emulation/libvirt virt-network
+app-emulation/qemu spice usbredir vhost-net usb
+
+# firefox
+www-client/firefox hwaccel
+
+# ffmpeg
+media-video/ffmpeg chromium opengl
+
+# chromium
+www-client/chromium widevine
+
+# mesa conflicts
+media-libs/mesa -vdpau -vaapi
+
+# pulseaudio
+media-sound/pulseaudio -ipv6 gtk
+
+# transmission
+net-p2p/transmission gtk
+
+# hardware acceleration
+x11-libs/libva opengl
+x11-libs/libva-vdpau-driver opengl
+
+# libreoffice
+app-office/libreoffice custom-cflags
+
+# rust
+dev-lang/rust system-llvm system-bootstrap
+
+# teams
+net-im/teams system-mesa
+
+# nodejs
+net-libs/nodejs system-icu
+
+##################################################################
+
+## REQUIRED
+
+# os-prober
+sys-boot/grub mount
+
+# libreoffice
+dev-libs/xmlsec nss
+media-libs/harfbuzz icu
+app-text/xmlto text
+
+# printer
+net-print/cups zeroconf
+media-gfx/iscan gui
+
+# telegram-desktop
+dev-qt/qtgui jpeg wayland egl
+media-video/ffmpeg opus alsa
+sys-libs/zlib minizip
+dev-libs/libpcre2 pcre16
+
+# iscan
+app-text/poppler cairo
+media-libs/gegl cairo
+
+# chromium
+dev-libs/libxml2 icu
+net-libs/nodejs inspector
+
+# firefox
+media-libs/libpng apng
+media-libs/libvpx postproc
+dev-lang/python sqlite
+x11-base/xorg-server xvfb
+
+# aegisub
+x11-libs/wxGTK opengl
+dev-lang/luajit lua52compat
+dev-libs/boost icu
+
+# teams
+app-crypt/pinentry gnome-keyring
+x11-libs/gdk-pixbuf jpeg
+app-crypt/pinentry gnome-keyring
+
+# celluloid
+media-video/mpv libmpv
+
+# igt-gpu-tools
+sys-libs/zlib static-libs
+
+# gnome-keyring
+app-crypt/gcr gtk
