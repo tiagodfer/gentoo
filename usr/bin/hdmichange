@@ -1,0 +1,23 @@
+#!/bin/bash
+export XAUTHORITY=/home/tiago/.Xauthority
+export DISPLAY=:0
+
+STATUS=$(xrandr | grep HDMI-1 | cut -d " " -f 2)
+HDMI_RES=$(xrandr | awk 'c&&!--c;/HDMI/{c=1}' | cut -d " " -f 4)
+
+if [[ $STATUS == connected ]]
+then
+        if [[ $HDMI_RES == 4096x2160 ]]
+        then
+        xrandr --output eDP-1 --auto --pos 3840x1392 --output HDMI-1 --primary --mode 3840x2160 --rate 25.00 --pos 0x0
+        else
+                if [[ $HDMI_RES == 2560x1440 ]]
+                then
+                xrandr --output eDP-1 --auto --pos 2560x672 --output HDMI-1 --primary --auto --pos 0x0
+                else
+                xrandr --output eDP-1 --auto --pos 1920x312 --output HDMI-1 --primary --auto --pos 0x0
+                fi
+        fi
+else
+        xrandr --auto
+fi
