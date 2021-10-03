@@ -1,0 +1,127 @@
+## MY CONFIGS
+
+## dwm
+x11-wm/dwm savedconfig
+x11-terms/st savedconfig
+
+## virtualization
+#app-emulation/libvirt virt-network
+#app-emulation/qemu spice usbredir vhost-net usb
+
+## firefox
+www-client/firefox hwaccel wayland
+
+## chromium
+#www-client/chromium widevine system-icu -tcmalloc L10N: -*
+
+## ffmpeg
+media-video/ffmpeg opengl
+
+## network
+net-misc/networkmanager -ppp -wext
+net-wireless/iwd -monitor -client
+net-wireless/wpa_supplicant -fils -hs2-0 -mbo -mesh
+net-misc/connman wifi
+
+## xfce
+#xfce-extra/tumbler pdf jpeg ffmpeg
+#xfce-base/xfce4-settings libnotify colord libcamberra
+#xfce-base/thunar libnotify
+#xfce-extra/thunar-volman libnotify
+#xfce-base/xfdesktop libnotify
+#media-video/ffmpegthumbnailer jpeg png gtk
+#xfce-base/xfce4-meta upower
+
+## mesa conflicts
+media-libs/mesa -vdpau -vaapi
+
+## pulseaudio
+media-sound/pulseaudio gtk
+
+## transmission
+net-p2p/transmission gtk
+
+## hardware acceleration
+x11-libs/libva opengl
+x11-libs/libva-vdpau-driver opengl
+
+## libreoffice
+app-office/libreoffice custom-cflags
+
+## rust
+dev-lang/rust system-llvm system-bootstrap
+
+## teams
+net-im/teams system-mesa
+
+## nodejs
+net-libs/nodejs system-icu -lto
+
+## kdenlive
+media-video/ffmpeg x264
+
+## obs-studio
+media-video/obs-studio -alsa v4l LUA_SINGLE_TARGET: -luajit
+
+## thumbnails
+x11-libs/libfm exif
+
+## printer
+media-gfx/imagemagick jpeg tiff png
+media-gfx/graphicsmagick jpeg tiff png
+
+## gparted
+sys-block/gparted brtfs f2fs fat hfs ntfs xfs
+
+## sxiv
+media-gfx/sxiv exif gif
+
+## sane
+media-gfx/sane-backends usb
+
+################################################################################
+
+# REQUIRED
+
+## libreoffice
+app-text/xmlto text
+media-libs/harfbuzz icu
+media-libs/freetype harfbuzz
+
+## firefox
+media-libs/libpng apng
+media-libs/libvpx postproc
+x11-libs/gtk+ wayland
+x11-base/xorg-server xvfb
+media-libs/mesa wayland
+dev-qt/qtgui dbus jpeg
+media-video/ffmpeg opus
+sys-libs/zlib minizip
+
+## chromium
+##dev-libs/libxml2 icu
+##net-libs/nodejs inspector
+
+## connman
+net-wireless/wpa_supplicant dbus
+
+## pcmanfm
+x11-libs/libfm gtk
+
+## os-prober
+sys-boot/grub mount
+
+## celluloid
+media-video/mpv libmpv
+
+## evince
+app-text/poppler cairo
+
+## gimp
+media-libs/gegl cairo
+
+## kdenlive
+media-libs/mlt ffmpeg frei0r sdl qt5 xml
+media-video/ffmpeg sdl
+media-libs/libsdl2 opengl
+dev-qt/qtcore icu
